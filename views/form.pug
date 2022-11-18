@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    nav 
+      h1 Mini Message Board
+    .form 
+      h2 Enter the details
+      form(action="/new", method="post")
+        div.inputBlock 
+         label(for="user") Name
+         input(type="text", name = "user", id = "user")
+        div.inputBlock
+         label(for="message") Message
+         textarea(cols="30", rows="5",name = "message" , id = "message")
+        button(type="submit") Submit  
