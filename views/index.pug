@@ -3,7 +3,7 @@ extends layout
 block content
   nav 
       h1 Mini Message Board
-      a(href= `http://localhost:3000/new`, class ="add")  Add Message 
+      a(href= `/new`, class ="add")  Add Message 
   h2 Messages : 
   .messageWrapper 
      each val, key in messages
