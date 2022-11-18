@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.woff") format("woff");
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
+body {
+  font-family: "Gilroy", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #1b2021;
+
+  color: #f1faee;
+}
+
+.messageWrapper {
+  display: grid;
+  padding: 1em 0;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+}
+.message {
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  transition: box-shadow 200ms ease-in;
+  border-radius: 0.3em;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
+.message:hover {
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
+}
+nav {
+  padding: 2em 0em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  padding: 0 1em;
+}
+
+.user {
+  display: flex;
+}
+.add {
+  color: #f1faee;
+  text-decoration: none;
+}
+.add:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form,
+.inputBlock {
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  gap: 1em;
+  width: 80%;
+}
+
+.inputBlock {
+  padding: 0;
+  gap: 0.4em;
+}
+input,
+textarea {
+  padding: 0.3em 0.3em;
+  font-family: "Gilroy", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+button {
+  padding: 0.5em 0em;
+  font-family: "Gilroy", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: transparent;
+  color: #f1faee;
+  border-color: #f1faee;
+  transition: color 200ms ease-in, background-color 200ms ease-in;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #f1faee;
+  color: #1b2021;
+}
+
+@media (min-width: 720px) {
+  nav {
+    padding: 2em 1em;
+  }
+  form {
+    width: 30%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
